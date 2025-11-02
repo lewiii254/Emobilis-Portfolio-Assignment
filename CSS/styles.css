@@ -1,0 +1,197 @@
+/* Custom Fonts and Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #343a40; /* Dark text color */
+}
+
+/* --- Navigation Bar Customization --- */
+#mainNav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #2c3e50; /* Dark background */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    transition: background-color 0.3s ease;
+}
+
+#mainNav .navbar-brand {
+    color: #1abc9c; /* Primary color for brand */
+    font-size: 1.5em;
+}
+
+#mainNav .nav-link {
+    font-weight: 600;
+    color: white;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+
+#mainNav .nav-link:hover {
+    color: #1abc9c; /* Highlight on hover */
+}
+
+/* --- Hero Section (Masthead) --- */
+.masthead {
+    padding-top: calc(7rem + 74px); /* Account for fixed navbar height */
+    padding-bottom: 6rem;
+    background-color: #1abc9c; /* Primary color background */
+}
+
+.masthead-heading {
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+}
+
+.masthead-subheading {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.masthead-avatar {
+    width: 12rem; /* Size of the profile image */
+    height: 12rem;
+    object-fit: cover;
+    border: 0.5rem solid rgba(255, 255, 255, 0.8);
+}
+
+/* Custom Divider Style */
+.divider-custom {
+    margin: 1.25rem 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider-custom .divider-custom-line {
+    width: 100%;
+    max-width: 7rem;
+    height: 0.25rem;
+    background-color: #2c3e50; /* Dark line color */
+    border-radius: 1rem;
+    opacity: 0.7;
+}
+
+.divider-custom .divider-custom-icon {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: #2c3e50;
+}
+
+.divider-custom.divider-light .divider-custom-line {
+    background-color: #fff;
+}
+
+.divider-custom.divider-light .divider-custom-icon {
+    color: #fff;
+}
+
+/* --- General Section Styling --- */
+.page-section {
+    padding: 6rem 0;
+}
+
+.page-section-heading {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+/* --- Skills Card Styling --- */
+.skill-card {
+    border-left: 5px solid #1abc9c; /* Highlight border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* --- Footer --- */
+.footer {
+    padding: 2rem 0;
+    background-color: #2c3e50; /* Same as navbar */
+}
+
+/* --- Responsive Design (Media Queries) --- */
+
+/* Adjusting font sizes for smaller screens (Bootstrap XS/SM) */
+@media (max-width: 992px) {
+    .masthead-heading {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+    }
+
+    .masthead-subheading {
+        font-size: 1.25rem;
+    }
+
+    .masthead {
+        padding-top: calc(5rem + 74px);
+    }
+}
+
+/* Custom **Flexbox** Example (for a project section if we added one) */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* This leverages Flexbox for item distribution */
+}
+
+/* --- New styles for added landing content --- */
+html {
+    scroll-behavior: smooth; /* native smooth scrolling for anchor links */
+}
+
+.btn-cta {
+    background-color: #2c3e50;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+.btn-cta:hover {
+    background-color: #253240;
+    color: #fff;
+}
+
+.service-card .display-6 {
+    font-size: 2.25rem;
+}
+
+.project-card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.testimonial-card {
+    border-left: 4px solid rgba(26, 188, 156, 0.7);
+}
+
+/* Contact textarea sizing (removed inline style) */
+#message {
+    min-height: 10rem;
+}
+
+/* Navbar shrink when scrolled */
+.navbar-shrink {
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+    background-color: #24313a !important;
+}
+
+/* Reveal animation for elements using the .reveal class */
+.reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Small utility for rounded project images on large screens */
+@media (min-width: 992px) {
+    .project-card img { height: 200px; }
+}
